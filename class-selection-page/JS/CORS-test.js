@@ -1,29 +1,23 @@
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/*
-const username= "gepmobile"
-const password="@#gepmobile#@"
-const token =""
- */
-const dominio = "https://apialuno.ergonsistemas.com.br:7073"
-const selecao = "/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&"
-const filtro = "FILTRO=cdescola=21145660 and exerc=2019 and cpf='012.311.273-76'"
+
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-var url = dominio+selecao+filtro;
+var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660%20and%20exerc=2018%20and%20cpf='012.311.273-76'";
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Basic Z2VwbW9iaWxlOkAjZ2VwbW9iaWxlI0A=");
 
-var xhr = new XMLHttpRequest();
-xhr.open("GET", url);
+        var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow',
+        mode: 'no-cors',
+        credentials: 'include'
+        };
 
-xhr.setRequestHeader("Authorization", "Basic Z2VwbW9iaWxlOkAjZ2VwbW9iaWxlI0A=");
-
-xhr.onreadystatechange = function () {
-   if (xhr.readyState === 4) {
-      console.log(xhr.status);
-      console.log(xhr.responseText);
-   }};
-
-xhr.send();
-
+        fetch(url, requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));

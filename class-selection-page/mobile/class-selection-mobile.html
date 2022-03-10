@@ -21,25 +21,48 @@
 
 
 </head>
-  <!-- migalha de pão -->
-  <div id="fundo-navegação">
-    <nav style="--bs-breadcrumb-divider: '\F27B';" class="breadcrumb" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Início</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a>Seleção de turmas</a></li>
-        </ol>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark bg-ergon">
+        <div class="container-fluid container-no-fluid">
+            <a href="#" class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon navbar-toggler-icon-back"></span>
+            </a>
+
+            <span class="title-nav-top">Seleção de turmas</span>
+
+            <a class="navbar-brand" href="#">
+                <div id="image-perfil-top">
+                    <div class="image-user"></div>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse nav-padding" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><span class="navbar-toggler-icon navbar-toggler-icon-back"></span></a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+            </div>
+        </div>
     </nav>
-</div>
+</header>
+<br>
 <body style="margin: 10px 10px 10px 10px;">
   <div class="corpo">  
     <div id="bimestre-and-filter" class="row">
       <label id="bimestre">Bimestre</label>
       <div class="dropdown col-9">
           <div id="bimestre_drop_btn">
-              <button id="drop_bimestre" class="btn btn-outline dropdown-toggle" type="button" id="drop_bim" data-bs-toggle="dropdown" aria-expanded="false">
+              <button id="drop_bimestre" 
+                      class="btn btn-outline dropdown-toggle" type="button" 
+                      data-bs-toggle="dropdown" aria-expanded="false">
                   1º Bimestre
               </button>
-              <ul id="drop_list" class="dropdown-menu" aria-labelledby="drop_bim">
+              <ul id="drop_list" class="dropdown-menu" aria-labelledby="drop_bimestre">
               <li><a class="dropdown-item" href="#">1º Bimestre</a></li>
               <li><a class="dropdown-item" href="#">2º Bimestre</a></li>
               <li><a class="dropdown-item" href="#">3º Bimestre</a></li>
@@ -63,7 +86,9 @@
         
       </div>
         </div>
-        <div class="col-lg-12" id="back_class_bar"><a id="class">&nbsp ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</a></div>
+        <div class="col-lg-12" id="back_class_bar">
+            <a id="class">ENSINO FUNDAMENTAL ANOS INICIAIS - MATUTINO</a>
+        </div>
       <p></p>
       <div class="container">
         <div class="diario">
@@ -76,21 +101,34 @@
                         <h5 class="card-header">
                         <div id="SERIETURMA" class="col-auto SERIETURMA"></div>
                         <div  id="cont_div2"class="col-7">
-                            <a id="student_icon" class="material-icons" href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity</a><span id="dot" class="material-icons">&bull;</span><label class="CDSERIE"></label>
+                            <a id="student_icon" class="material-icons" 
+                               href="class-selection-page/templates/testes/grid-lst/index.html">perm_identity
+                            </a>
+
+                            <span id="dot" class="material-icons">&bull;</span>
+
+                            <label class="CDSERIE"></label>
                         </div>
                         <div id="cont_div3" class="col-sm-1">
-                            <span id="class_lock" class="material-icons" data-bs-toggle="modal" data-bs-target="#modal_confirmation">lock_open</span>
+                            <span id="class_lock" class="material-icons" data-bs-toggle="modal" 
+                                  data-bs-target="#modal_confirmation">lock_open</span>
                         </div>
                         </h5>
                         <div class="card-body">
                         <div class="card-title"></div>
-                            <div class="card-text"><a class="DISCIPLINA" href="attendance-page.html"></a></div>
+                            <div class="card-text">
+                                <a class="DISCIPLINA" href="attendance-page.html"></a>
+                            </div>
                             <div class="col-12"><hr></div>
-                            <div class="col-12" id="teacher"><label class="PROFESSOR" id="teacher"></label></div>
+                            <div class="col-12" id="teacher">
+                                <label class="PROFESSOR" id="teacher"></label>
+                            </div>
                             <div class="col-12" id="progress_bar_tittle">
                                 <a id="progress_bar_tittle">AULAS DADAS X AULAS PREVISTAS</a>
                                 <div class="progress">
-                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70" style="width: 38.5%">55</div>
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                         role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="70"
+                                         style="width: 38.5%">55</div>
                                 </div>
                             </div>
                         </div>

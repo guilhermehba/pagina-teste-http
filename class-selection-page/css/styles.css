@@ -45,6 +45,7 @@ text-align: center;
 background: #FEFEFE;
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 border-radius: 16px;
+margin: 15px 15px;
 /*    word-wrap:break-word;   */
 }
 
@@ -191,25 +192,25 @@ width: 50%;
 }
 /*=========nav=========*/
 /*=========bimestre=========*/
+#bimestre-and-filter{
+  margin: 10px 0 0 10px;
+}
+
+
 #bimestre{
   font-size: 18px;
   line-height: 24px;
   
 }
 
-#diario-turma{
-  font-size: 18px;
-  line-height: 24px;
-  width: 100%;
 
-}
 
 #drop_bimestre{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
-  width: 228px;
+  width: 235px;
   height: 48px;
   color: #AB58B9;
   
@@ -221,12 +222,16 @@ background: #FFFDFD;
 border: 1px solid #6F31AD;
 box-sizing: border-box;
 border-radius: 8px;
-width: 228px;
+width: 235px;
 color: #6F31AD;
 
 }
 #drop_list{
 width: 25%;
+
+}
+#drop_list:hover{
+  background-color: #7D3989;
 }
 /**/
 #bimestre_filter_btn{
@@ -244,8 +249,8 @@ width: 25%;
       font-size: 16px;
       width: 126px;
       height: 48px;
-      text-align: justify;
-
+      text-align: center;
+      
       cursor: pointer;
       
 }
@@ -263,6 +268,15 @@ width: 25%;
   margin-top: 5px;
   cursor: pointer;
 }
+
+#diario-turma{
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
+  margin:  0 0 10px 25px;
+
+}
+
 #back_class_bar{
   background: #D6E3EA;
   border-radius: 2px 2px 0px 0px;
@@ -270,7 +284,7 @@ width: 25%;
   left: 86px;
   padding-top: 7px;
   padding-left: 7px;
-  margin-bottom: 7px;
+  margin:  10px 0 10px 25px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -453,41 +467,47 @@ width: 25%;
       color: #AB58B9;
 }
 /*========filter modal=========*/
+.form-check-input:checked{
+background-color: #6F31AD;
+border: #6F31AD solid;
+border-inline-color: #6F31AD;
+}
+
 #modalFilter{
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
   border-radius: 24px;
 }
-#dropdown_professor{
+#dropdown_professor_filtro{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   width: 276px;
-  text-align: right;
+  
 }
-#dropdown_bimestre{
+#dropdown_bimestre_filtro{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   width: 276px;
-  text-align: right;
+  
 }
-#dropdown_series{
+#dropdown_serie_filtro{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   width: 276px;
-  text-align: right;
+  
 }
-#dropdown_turmas{
+#dropdown_turma_filtro{
   background: #FFFDFD;
   border: 1px solid #6F31AD;
   box-sizing: border-box;
   border-radius: 8px;
   width: 276px;
-  text-align: right;
+  
 }
 
 #apply_filter{

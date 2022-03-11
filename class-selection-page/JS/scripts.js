@@ -1,5 +1,5 @@
 function main2() {
-    var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2018 and cpf='012.311.273-76'"
+    var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2020 and cpf='012.311.273-76'"
     var postData;
 
     const xhttp = new XMLHttpRequest();
@@ -25,6 +25,7 @@ function main2() {
                 $(newItem).find(".DISCIPLINA").html(object.DISCIPLINA);
                 $(newItem).find(".PROFESSOR").html(object.PROFESSOR);
                 $(newItem).find(".CDSERIE").html(object.CDSERIE);
+                $(newItem).find("#lock_open").html(object.STATUS)
                 //Append it
 
                 $(".diario").append(newItem);
@@ -45,7 +46,13 @@ function main2() {
     xhttp.setRequestHeader("Authorization", "Basic Z2VwbW9iaWxlOkAjZ2VwbW9iaWxlI0A=");
     xhttp.send();
 }
-
+function getSelectionValue(drop_bimestre)
+{
+        if (drop_bimestre!='')
+        {
+            $("#diarioTemplate ['"+BIMESTRE[0]+"']").hide();
+        }
+}
 main2();
 
 
@@ -78,3 +85,7 @@ function notificationGEP(msg, position) {
         
     toast.show();
 }
+
+
+/* ======================================================= */
+

@@ -560,16 +560,14 @@ border-inline-color: #6F31AD;
   display: flex;
   flex-wrap: wrap;
   padding: .25rem 1rem;
-  margin-bottom: 0;
+
   list-style: none;
   background: #F3F5F7;
   border-radius: .25rem;
   --bs-breadcrumb-divider: '>';
   /* animation-name: identifier;
   animation-duration: 4s; */
-  
 
-  
 }
 
 /* btn ergon */

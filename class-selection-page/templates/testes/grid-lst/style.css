@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
 
 /* For desktop: */
 .col-1 {width: 8%;}
 .col-2 {width: 16%;}
-.col-3 {width: 326px;}
+.col-3 {width: 320px;}
 .col-4 {width: 30%;}
 .col-5 {width: 40%;}
 .col-6 {width: 50%;}
@@ -14,22 +16,32 @@
 .col-10 {width: 83%;}
 .col-11 {width: 92%;}
 .col-12 {width: 100%;}
-
-.grid, .list{
-  display: none;
+*{
+  text-decoration: none;
+}
+.SERIETURMA{
+  font-size: 26px;
+  margin: 60px 30px 30px 30px;
+} 
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .25rem 1rem;
+  list-style: none;
+  background: #F3F5F7;
+  border-radius: .25rem;
+  --bs-breadcrumb-divider: '>';
+  /* animation-name: identifier;
+  animation-duration: 4s; */
 }
 
 @media screen 
   and (device-width: 360px) 
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 2) {
-   
 }
 * {
     box-sizing: border-box;
-    margin: 10px 10px 10px 10px;
-
-
     font-family: Poppins;
     font-style: normal;
     font-size: 16px;
@@ -39,7 +51,6 @@
     background-color: none;
     color: black;
     border-radius: 5px;
-    padding: 10px;
     text-align: center;
     background: #FFFFFf;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
@@ -56,7 +67,7 @@
   /* Create two equal columns that floats next to each other */
   .row{
     text-align: center;
-    margin:0 auto;
+
     
     
   }
@@ -68,6 +79,7 @@
     background: #FEFEFE;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
     border-radius: 16px;
+    margin: 10px 10px 10px 10px;
     /*    word-wrap:break-word;   */
   }
   
@@ -145,74 +157,3 @@
   }
 
   /*++++++++++++++++++++++++++++++++++++*/
-
-  /*box config*/
-  #ident_class{
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-
-    /* identical to box height, or 100% */
-    color: #AB58B9;
-}
-
-#class_cod{
-  
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
-    text-align: justify;
-    color: #4F4F4F;
-    margin: 10px;
-  }
-/*student icon, dot and count number*/
-#student_icon{
-    color: #AB58B9;
-    font-size: 20px;
-    cursor: pointer;
-}
-#dot{
-    color: #AB58B9;
-    font-size: 20px;
-  
-}
-#student_count{
-
-    font-size: 20px;
-    color: #AB58B9;
-
-}
-/*student icon, dot and count number*/
-#class_lock{
-        font-family: Material Icons;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 24px;
-        cursor: pointer;
-        
-        color: #AB58B9;
-}
-#cont_div{
-  text-align:end;
-  margin: 1% 0% 0% 0%;
-  
-}
-*{
-  text-decoration: none;
-}
-#progress_bar_tittle{
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 8px;
-  /* identical to box height, or 100% */
-  align-items: left;
-
-  color: #4F4F4F;
-}
-.progress-bar{
-  width: 50%;
-}

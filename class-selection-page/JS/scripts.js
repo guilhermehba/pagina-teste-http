@@ -46,13 +46,7 @@ function main2() {
     xhttp.setRequestHeader("Authorization", "Basic Z2VwbW9iaWxlOkAjZ2VwbW9iaWxlI0A=");
     xhttp.send();
 }
-function getSelectionValue(drop_bimestre)
-{
-        if (drop_bimestre!='')
-        {
-            $("#diarioTemplate ['"+BIMESTRE[0]+"']").hide();
-        }
-}
+
 main2();
 
 
@@ -88,4 +82,13 @@ function notificationGEP(msg, position) {
 
 
 /* ======================================================= */
-
+/* 
+function getSelectionValue(drop_bimestre)
+{
+        if (drop_bimestre!='')
+        {
+            //alert(drop_bimestre)
+            $("#dropdown_bimestre_filtro option[value='"+drop_bimestre+"']").hide();
+        }
+}
+ */

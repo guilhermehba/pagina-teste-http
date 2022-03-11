@@ -10,6 +10,9 @@ line-height: 24px;
 body a{
   text-decoration: none;
 }
+.corpo{
+  margin-top: 60px;
+}
 a{
   color: #AB58B9 ;
 }

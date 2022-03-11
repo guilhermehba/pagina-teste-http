@@ -52,12 +52,12 @@
             <!--Dropdown Bimestre-->
             <div class="dropdown col-sm-10">
                 <div id="bimestre_drop_btn">
-                    <select name="" id="drop_bimestre" class="btn" onchange="function getSelectionValue(value)">
-                        <option value="">--Selecione o Bimestre--</option>
-                        <option id="drop_list" value="TESTE_1">1º Bimestre</option>
-                        <option id="drop_list" value="TESTE_2">2º Bimestre</option>
-                        <option id="drop_list" value="TESTE_3">3º Bimestre</option>
-                        <option id="drop_list" value="TESTE_4">4º Bimestre</option>
+                    <select name="" id="drop_bimestre" class="btn BIMESTRE" onchange="getSelectionValue(this.value)">
+                        <option value="">- Selecione o Bimestre -</option>
+                        <option id="drop_list" value="opt_bimestre_1">1º Bimestre</option>
+                        <option id="drop_list" value="opt_bimestre_2">2º Bimestre</option>
+                        <option id="drop_list" value="opt_bimestre_3">3º Bimestre</option>
+                        <option id="drop_list" value="opt_bimestre_4">4º Bimestre</option>
                         
                     </select>
                 </div>
@@ -102,7 +102,7 @@
                         </h5>
                         <div class="card-body">
                             <div class="card-title"></div>
-                            <div class="card-text"><a class="DISCIPLINA" href="attendance-page.html"></a></div>
+                            <div class="card-text"><a class="DISCIPLINA" href="../../attendance-page.html"></a></div>
                             <div class="col-12">
                                 <hr>
                             </div>
@@ -171,7 +171,6 @@
                     <label id="lbl_drop_filters" for="dropdown_bimestre_filtro">Bimestre</label>
                     <div class="dropdown" id="center_align_div">
                         <select name="" id="dropdown_bimestre_filtro"  class="btn">
-
                             <option id="drop_list" value="opt_bimestre">--Selecione o Bimestre--</option>
                             <option id="drop_list" value="opt_bimestre_1">Bimestre 1</option>
                             <option id="drop_list" value="opt_bimestre_2">Bimestre 2</option>

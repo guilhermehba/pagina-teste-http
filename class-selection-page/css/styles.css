@@ -11,8 +11,11 @@ text-decoration: none;
 }
 @media only screen and (max-width: 1440px) {
   .col-3{
-    width: 336px;
-  
+    width: 334px;
+    
+  }
+  .row{
+    margin-left: 16px;
   }
 }
 @media only screen and (max-width: 1320px) {
@@ -24,7 +27,6 @@ text-decoration: none;
 @media only screen and (max-width: 1220px) {
   .col-3{
     width: 33%;
-  
   }
 }
 @media only screen and (max-width: 1120px) {
@@ -70,10 +72,8 @@ label{
 float: none;
 text-align: center;
 background: #FEFEFE;
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 border-radius: 16px;
-margin: 15px 15px;
-/*    word-wrap:break-word;   */
+margin-left: -6px;
 }
 
 /* Style the buttons */
@@ -105,27 +105,31 @@ color: #4F4F4F;
 /*student icon, dot and count number*/
 #student_icon{
 color: #AB58B9;
-font-size: 16px;
+width: 14px;
+height: 16px;
 cursor: pointer;
-
+margin: 5px 5px 2px 2px;
 font-family: Material Icons;
 cursor: pointer;
 border-radius: 50px;
 }
 #dot{
 color: #AB58B9;
-font-size: 26px;
+width: 4px;
+height: 4.5px;
 
-margin: 2px 2px 2px 2px;
+margin: 5px 5px 2px 2px;
 font-family: Material Icons;
 cursor: pointer;
 border-radius: 50px;
 }
 #student_count{
 
-font-size: 16px;
+width: 26px;
+height: 24px;
 color: #AB58B9;
-
+font-size: 20px;
+margin-top: -5px;
 font-family: Poppins;
 cursor: pointer;
 border-radius: 50px;
@@ -160,7 +164,7 @@ text-decoration: none;
   height: 25px;
   text-align: right;
   float: left;
-
+  padding-right: 10px;
   font-size: 12px;
   margin-top: -7px;
  
@@ -196,6 +200,11 @@ text-align: left;
 font-size: 12px;
 border-radius:20px;
 
+}
+#max_aulas{
+  font-size: 12px; 
+  margin-top: -5px; 
+  margin-left: 55px;
 }
 .progress{
   background-color: #d8d2d2;
@@ -250,7 +259,7 @@ border-radius:20px;
   width: 235px;
   height: 48px;
   color: #AB58B9;
-  
+  margin-left: 20px;
   
 
 }
@@ -287,7 +296,7 @@ width: 25%;
       width: 126px;
       height: 48px;
       text-align: center;
-      
+      margin-right: -20px;
       cursor: pointer;
       
 }

@@ -6,7 +6,7 @@
 /* For desktop: */
 .col-1 {width: 8%;}
 .col-2 {width: 16%;}
-.col-3 {width: 320px;}
+.col-3 {width: 300px;}
 .col-4 {width: 30%;}
 .col-5 {width: 40%;}
 .col-6 {width: 50%;}
@@ -21,7 +21,7 @@
 }
 .SERIETURMA{
   font-size: 26px;
-  margin: 60px 30px 30px 30px;
+  margin: 40px 20px 20px 20px;
 } 
 #fundo-navegação{
   position: relative;
@@ -38,11 +38,15 @@
   /* animation-name: identifier;
   animation-duration: 4s; */
 }
+.material-icons-next{
+  font-family: Material Icons;
+}
 
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) {
+@media screen and (max-width: 670px) 
+ {
+    .col-3{
+      width: 100%;
+    }
 }
 * {
     box-sizing: border-box;
@@ -71,7 +75,7 @@
   /* Create two equal columns that floats next to each other */
   .row{
     text-align: center;
-
+    background-color: #F3F5F7;
     
     
   }
@@ -140,13 +144,22 @@
  
     
   }
- 
+ #profile_add{
+  margin: 15px 110px; 
+  border-radius: 50px;
+ }
   img {
     object-fit: cover;
     width: 80px;
     
     z-index: 0;
     cursor: pointer;
+  }
+  #output{
+    width: 64px;
+    height: 64px;
+    background-color: #AB58B9;
+    border-radius: 50px !important;
   }
   #file{
     display: none;

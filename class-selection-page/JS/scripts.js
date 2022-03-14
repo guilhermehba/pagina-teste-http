@@ -1,6 +1,30 @@
 function main2() {
-    var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2020 and cpf='012.311.273-76'"
-    var postData;
+   
+    var database = "database=GEP_TESTE&"
+    var tabela = "TABELA=V_API_TurmasDiario&"
+    var filtro = "FILTRO=cdescola=21145660 and exerc=2020 and cpf='012.311.273-76'"
+    var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?"+database+tabela+filtro
+      
+    var localhost ="http://127.0.0.1:5500/?"+database+tabela+filtro
+    var teste = localhost+database+tabela+filtro
+    var busca = {localhost}
+
+    console.log(teste)
+    
+
+    var settings = {
+        "url": "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2019 and cpf='012.311.273-76'",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+          "Authorization": "Basic Z2VwbW9iaWxlOkAjZ2VwbW9iaWxlI0A="
+        },
+      };
+      
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
+
 
     const xhttp = new XMLHttpRequest();
 
@@ -35,12 +59,11 @@ function main2() {
             console.log("it's works");
             console.log(dado[1]);
         } else {
-            document.querySelector('.diario').innerHTML += `
-            Problem
-        `;
+            document.querySelector('.diario').innerHTML += `Problem`;
         }
     }
 
+    
     // Send a request
     xhttp.open("GET", url);
     xhttp.setRequestHeader("Authorization", "Basic Z2VwbW9iaWxlOkAjZ2VwbW9iaWxlI0A=");

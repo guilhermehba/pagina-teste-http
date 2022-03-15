@@ -1,38 +1,15 @@
 function main2() {
    
-    var database = "database=GEP_TESTE&"
-    var tabela = "TABELA=V_API_TurmasDiario&"
-    var filtro = "FILTRO=cdescola=21145660 and exerc=2020 and cpf='012.311.273-76'"
-    var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?"+database+tabela+filtro
-      
-    var localhost ="http://127.0.0.1:5500/?"+database+tabela+filtro
-    var teste = localhost+database+tabela+filtro
-    var busca = {localhost}
 
-    console.log(teste)
+    var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2020 and cpf='012.311.273-76'"
     
-
-    var settings = {
-        "url": "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2019 and cpf='012.311.273-76'",
-        "method": "GET",
-        "timeout": 0,
-        "headers": {
-          "Authorization": "Basic Z2VwbW9iaWxlOkAjZ2VwbW9iaWxlI0A="
-        },
-      };
-      
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-      });
-
-
     const xhttp = new XMLHttpRequest();
 
     xhttp.onload = async function () {
         var dado = await JSON.parse(this.responseText);
-        // var aluno = alunos['CDESCOLA'];
-        if (this.readyState == 4 && this.status == 200) {
 
+        if (this.readyState == 4 && this.status == 200) {
+            
             //Set Up the template
             var s = $("#diarioTemplate")[0].innerHTML.trim();
             var holder = document.createElement('div');
@@ -104,14 +81,15 @@ function notificationGEP(msg, position) {
 }
 
 
-/* ======================================================= */
-/* 
-function getSelectionValue(drop_bimestre)
-{
-        if (drop_bimestre!='')
-        {
-            //alert(drop_bimestre)
-            $("#dropdown_bimestre_filtro option[value='"+drop_bimestre+"']").hide();
-        }
-}
- */
+/* =============================== */
+var query = location.search;
+var partes = query.split('&');
+var data = {};
+partes.forEach(function (url) {
+    var chaveValor = url.split('=');
+    var chave = chaveValor[0]
+    var valor = chaveValor[1];
+    data[chave] = valor;
+});
+console.log(data);
+/* =============================== */

@@ -23,12 +23,4 @@ function gridView() {
 var loadFile = function (event) {
   var image = document.getElementById("output");
   image.src = URL.createObjectURL(event.target.files[0]);
-  
-  if(image && image.style) {
-    image.style.height = '80px';
-    image.style.width = '80px';
-    image.style.margin = "0 0 0 0";
-    image.style.borderRadius = "50px";
-}
-  
 };

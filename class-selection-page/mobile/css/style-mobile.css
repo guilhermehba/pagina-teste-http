@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
-
-
 header, #bimestre-and-filter, #class{margin: 5px 5px 5px 5px;}
 * {
 font-family: Poppins;

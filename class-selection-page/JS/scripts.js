@@ -1,8 +1,26 @@
 function main2() {
-   
-
     var url = "http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2020 and cpf='012.311.273-76'"
+    new URL("http://apialuno.ergonsistemas.com.br:7073/SELECT?database=GEP_TESTE&TABELA=V_API_TurmasDiario&FILTRO=cdescola=21145660 and exerc=2020 and cpf='012.311.273-76'")
+
+    /* =============================== */
+    var query = location.search;
+    var partes = query.split('&');
+    var data = {};
+    partes.forEach(function (url) {
+        var chaveValor = url.split('=');
+        var chave = chaveValor[0]
+        var valor = chaveValor[1];
+        data[chave] = valor;
+    });
+    console.log(data);
+    /* =============================== */
+    console.log(URL)
+
     
+    let newUrl = new URL(data, url);
+
+
+    //alert(newUrl);
     const xhttp = new XMLHttpRequest();
 
     xhttp.onload = async function () {
@@ -26,19 +44,21 @@ function main2() {
                 $(newItem).find(".DISCIPLINA").html(object.DISCIPLINA);
                 $(newItem).find(".PROFESSOR").html(object.PROFESSOR);
                 $(newItem).find(".CDSERIE").html(object.CDSERIE);
-                $(newItem).find("#lock_open").html(object.STATUS)
+                
                 //Append it
 
                 $(".diario").append(newItem);
+                
 
             });
-
-            console.log("it's works");
+            
+            console.log("Por enquanto tudo tranquilo!!");
             console.log(dado[1]);
         } else {
             document.querySelector('.diario').innerHTML += `Problem`;
         }
     }
+   
 
     
     // Send a request
@@ -55,7 +75,7 @@ main2();
 
 function test() {
     $(window).on('load resize', function () {
-        if ($(window).width() < 950) {
+        if ($(window).width() < 1000) {
             window.location = "class-selection-page/mobile/class-selection-mobile.html"
         }
     });
@@ -81,15 +101,4 @@ function notificationGEP(msg, position) {
 }
 
 
-/* =============================== */
-var query = location.search;
-var partes = query.split('&');
-var data = {};
-partes.forEach(function (url) {
-    var chaveValor = url.split('=');
-    var chave = chaveValor[0]
-    var valor = chaveValor[1];
-    data[chave] = valor;
-});
-console.log(data);
-/* =============================== */
+

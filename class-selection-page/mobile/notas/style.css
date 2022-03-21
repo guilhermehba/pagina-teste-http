@@ -1,16 +1,23 @@
+/* importação da fonte Poppins */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+/* Importação dos Icones estilizados do google*/
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/* importação de outro pacote de icones estilizados */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+/* importação dos icones do Bootstrap */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
 
-
+/* fonte Poppins Para todos os campos possiveis da pagina, para n ter q declarar um a um */
 *{
     font-family: Poppins;
 }
+/* posicionamento vertical das setas para esquerda e direita, que tem como função, alternar entre as matérias */
+.car-btn{
+    height: 30px; 
+  }
 /* titulo ao lado do cadeado */
 .titulo{
     text-align: center;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -56,7 +63,12 @@ img{
     height: 60px;
     border-radius: 50%;
 }
-
+/* div - nome, matricula e situação */
+.info-aluno{
+    float: right;
+    margin-right: 140px;
+    margin-top: 10px;
+    }
 /* nome do aluno */
 .aluno-nome{
 
@@ -72,7 +84,6 @@ img{
     top: 27.55%;
     bottom: 56.12%;
 
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 8px;
@@ -84,23 +95,20 @@ img{
 
     color: #4F4F4F;
 }
+/* situação do aluno, aprovado, reprovado ou transferido */
 .situacao{
 
     background: #089944;
     border-radius: 24px;
     width: 220px;
 }
-
-
-.info-aluno{
-float: right;
-margin-right: 120px;
-}
+/* apenas uma linha 'hr' q divide o cabeçalho, da barra de progresso*/
 .linha{
     margin-top: 70px;
     margin-left: 0%;
     border: 1px solid rgba(130, 130, 130, 0.5);
 }
+/* setas para esquerda e direita que fazem a transição entre as paginas */
 .material-icons-outlined{
     font-family: Material icons;
     color: #4D228A;
@@ -109,7 +117,7 @@ margin-right: 120px;
     font-size: 24px;
     line-height: 16px;
 }
-
+/* circulo da progressbar que exibe a nota atual do aluno */
 .dot {
     height: 35px;
     width: 35px;
@@ -121,38 +129,40 @@ margin-right: 120px;
     position: absolute;
     color: #089944;
   }
+  /* posicionamento da barra para se alinhar ao circulo e se unir a ele */
   .barra{
       padding-top: 10px;
       margin-left: 30px;
   }
+  /* variação 1 da barra de progresso */
   .prog1{
     background-color: #089944;
     color: #fff;
   }
-  .circ2{
-    border-color: #C20101;
-    color: #C20101;
-  }
+  /* variação 2 da barra de progresso */
   .prog2{
      background-color: #C20101;
      color: #fff; 
   }
-
-  
-  
-  .car-btn{
-    height: 30px; 
+  /* variação 2 do circulo que exibe a nota do aluno */
+  .circ2{
+    border-color: #C20101;
+    color: #C20101;
   }
+/* variação 3 do circulo q exibe a nota do aluno */
+  .circ3{
+    border-color:#FFD47D;
+  }
+  /* filtro de embaçado na div relacionada ao aluno que foi transferido */
   .blur{
     
     filter: blur(0.7px);
     opacity: 0.7;
   }
+  /* redução do blur no campo de situação do aluno transferido */
   .non-blur{
     filter: blur(-15px);
     background-color:#FFD47D;
 
   }
-  .circ3{
-    border-color:#FFD47D;
-  }
+  

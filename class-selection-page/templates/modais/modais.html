@@ -7,12 +7,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles-of-modals.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/poppins.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
+  
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
     <title>Document</title>
@@ -191,64 +190,47 @@
       <!-- Modal Nova Aula -->
       <!-- Modal Observações-->
       <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete_on_confirm_code"  onclick="document.getElementById('random_numero').innerHTML = getRndInteger(0,699999), dataHoje()">
   Launch demo modal
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal fade" id="delete_on_confirm_code" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"  style="width: 438px; height: 256px;">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+      
       <div class="modal-body">
-        ...
+        <div>Digite o seguinte código <a id="random_numero"></a> para confirmar.</div>
+        <div>Exclusão da frequência do dia: <a id="dataHoje"></a></div>
+        <p></p>
+        <input id="input_code" style="width: 248px;" type="number">
+        <br>
+        <br>
+        <button id="enviar_cod" class="btn" onclick="confirmarExclusaoTeste()">Enviar</button>
+        <button id="cancelar_envio" class="btn" data-bs-dismiss="modal">Cancelar</button>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      
     </div>
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 
       <!-- Modal Observações-->
       <!-- Sweet alert confirmation -->
-      <div class="row sweetalert2">
-        <div class="col-5">
+    
+       
           <button class="btn btn-success" onclick="acionar(), document.getElementById('random_numero').innerHTML = getRndInteger(0,699999)">
             Sweet Alert
           </button>
-          <br>
-          <br>
-          <br>
-          <div id="random_numero"></div>
-        </div>
-       
-        <div class="col-5">
+
           <button class="btn btn-danger" onclick="teste()">
             teste
           </button>
-        </div>
+       
   
         
-      </div>
+   
       
       <!-- Sweet alert confirmation -->
 </body>

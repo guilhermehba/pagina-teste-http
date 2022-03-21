@@ -18,11 +18,14 @@ function main2() {
         data[chave] = valor;
     });
     console.log(data);
-
+    // var prof_cpf = data['cpf'];
+    // var ano_exerc = data['exerc'];
+    // var codescola = data['cdescola'];
     var database = data['?database'];
     var table = data['TABELA'];
 
 // ======================================================================================================================================================================
+//  var newURL = `http://apialuno.ergonsistemas.com.br:7073/SELECT?database=${database}&TABELA=${table}&FILTRO=cdescola=${codescola} and exerc=${ano_exerc} and cpf='${prof_cpf}'`;
     var newURL = `http://apialuno.ergonsistemas.com.br:7073/SELECT?database=${database}&TABELA=${table}&FILTRO=cdescola=17000000 and exerc=2021 and cpf='648.578.671-68'`;
 // ======================================================================================================================================================================
     console.log("novo url:" + newURL);

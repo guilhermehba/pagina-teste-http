@@ -55,9 +55,8 @@
 /* icone do aluno */
 img{
 
-    position: absolute;
+ 
     border:#4D228A 3px solid;
-    background: url(.png);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     width: 60px;
     height: 60px;
@@ -65,9 +64,9 @@ img{
 }
 /* div - nome, matricula e situação */
 .info-aluno{
-    float: right;
-    margin-right: 140px;
-    margin-top: 10px;
+    float: left;
+    margin-left: 70px;
+    margin-top: -50px;
     }
 /* nome do aluno */
 .aluno-nome{
@@ -104,7 +103,7 @@ img{
 }
 /* apenas uma linha 'hr' q divide o cabeçalho, da barra de progresso*/
 .linha{
-    margin-top: 70px;
+    margin-top: 20px;
     margin-left: 0%;
     border: 1px solid rgba(130, 130, 130, 0.5);
 }
@@ -165,4 +164,48 @@ img{
     background-color:#FFD47D;
 
   }
-  
+  .nota-etapa{
+    background: #FFFFFF;
+    border: 1px solid #AB58B9;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 67.38px;
+    text-align: center;
+  }
+  .etapa{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 100% */
+    
+    
+    align-items: center;
+    
+    color: #4F4F4F;
+  }
+  .card-nota{
+    left: 0%;
+    right: 0%;
+    top: 34.31%;
+    bottom: 0%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 8px 8px;
+    
+  }
+  .fechar-nota{
+    background: #AB58B9;
+    border-radius: 24px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 32px;
+    /* or 229% */
+
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+  }

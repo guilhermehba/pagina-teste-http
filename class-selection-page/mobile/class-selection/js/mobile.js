@@ -52,7 +52,7 @@ main2();
 function test() {
     $(window).on('load resize', function () {
         if ($(window).width() > 950) {
-            window.location = "../../class-selection.html"
+            window.location = "../../../class-selection.html"
         }
     });
 }

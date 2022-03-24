@@ -30,3 +30,24 @@ function acionar() {
     }
   });
 }
+
+if(navigator.onLine){
+    
+} else {
+  $('#networkModal').modal({backdrop: 'static'});
+
+  //countdown per seconds
+  var timeleft = 30;
+  var networkTimer = setInterval(function(){
+    if(timeleft <= 0){
+      clearInterval(networkTimer);
+      setTimeout(function(){
+        window.location.reload(1);
+      })
+    } else {
+      document.getElementById("countdown").innerText = timeleft + "s";
+    }
+    timeleft -= 1;
+  }, 1000);
+  //countdown per seconds
+}
